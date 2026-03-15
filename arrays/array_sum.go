@@ -9,8 +9,8 @@ func Sum(numbers []int) int {
 }
 
 func SumAll(numbersToSum ...[]int) []int {
-	lengthOfNumbers := len(numbersToSum)
-	sums := make([]int, 0, lengthOfNumbers)
+	numberOfSlices := len(numbersToSum)
+	sums := make([]int, 0, numberOfSlices)
 
 	for _, numbers := range numbersToSum {
 		sums = append(sums, Sum(numbers))
@@ -19,8 +19,8 @@ func SumAll(numbersToSum ...[]int) []int {
 }
 
 func SumAllTails(numbersToSum ...[]int) []int {
-	lengthOfNumbers := len(numbersToSum)
-	sums := make([]int, 0, lengthOfNumbers)
+	numberOfSlices := len(numbersToSum)
+	sums := make([]int, 0, numberOfSlices)
 
 	for _, numbers := range numbersToSum {
 		if len(numbers) == 0 {
